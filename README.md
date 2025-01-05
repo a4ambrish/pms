@@ -3,6 +3,8 @@ Project Microservice
 
 ![Top Level Diagram](high-level.drawio.svg)
 
+# ![Developer Machine Setup Guide](Developer-Machine-Setup-Guide.md)
+
 
 # This project is aimed to demonstrate the ability to handle application developed using microservice architecture. 
 ## Service A –
