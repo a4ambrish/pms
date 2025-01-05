@@ -9,31 +9,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pms.genesis.servicea.entity.ServiceBRecords;
-import com.pms.genesis.servicea.service.ServiceBRecordsService;
+import com.pms.genesis.servicea.entity.ServiceCRecords;
+import com.pms.genesis.servicea.service.ServiceCRecordsService;
 
 @RestController(value = "serviceAController")
 
-@RequestMapping("/service-b")
-public class ServiceBController {
+@RequestMapping("/service-c")
+public class ServiceCController {
 
     @Autowired
-    ServiceBRecordsService serviceBRecordsService;
+    ServiceCRecordsService serviceCRecordsService;
 
-    @GetMapping("/sub")
-    public Map<String, Object> getSum(@RequestParam(name="a") int a, @RequestParam(name="b") int b) {
-        int sub = a - b;
+    @GetMapping("/multiply")
+    public Map<String, Object> getMultiply(@RequestParam(name="a") int a, @RequestParam(name="b") int b) {
+        int multiply = a * b;
         Map<String, Object> response = new HashMap<>();
         response.put("a", a);
         response.put("b", b);
-        response.put("sub", sub);
+        response.put("multiply", multiply);
     
-    ServiceBRecords record = new ServiceBRecords();
-    record.setOperation("sub");
+    ServiceCRecords record = new ServiceCRecords();
+    record.setOperation("multiply");
     record.setA(a);
     record.setB(b);
-    record.setResult(sub);
-    serviceBRecordsService.saveRecord(record);
+    record.setResult(multiply);
+    serviceCRecordsService.saveRecord(record);
     
         return response;
     }

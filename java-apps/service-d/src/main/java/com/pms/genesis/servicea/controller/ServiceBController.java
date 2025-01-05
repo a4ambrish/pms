@@ -9,31 +9,31 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pms.genesis.servicea.entity.ServiceBRecords;
-import com.pms.genesis.servicea.service.ServiceBRecordsService;
+import com.pms.genesis.servicea.entity.ServiceDRecords;
+import com.pms.genesis.servicea.service.ServiceDRecordsService;
 
 @RestController(value = "serviceAController")
 
-@RequestMapping("/service-b")
+@RequestMapping("/service-d")
 public class ServiceBController {
 
     @Autowired
-    ServiceBRecordsService serviceBRecordsService;
+    ServiceDRecordsService serviceDRecordsService;
 
-    @GetMapping("/sub")
+    @GetMapping("/div")
     public Map<String, Object> getSum(@RequestParam(name="a") int a, @RequestParam(name="b") int b) {
-        int sub = a - b;
+        int div = a / b;
         Map<String, Object> response = new HashMap<>();
         response.put("a", a);
         response.put("b", b);
-        response.put("sub", sub);
+        response.put("div", div);
     
-    ServiceBRecords record = new ServiceBRecords();
-    record.setOperation("sub");
+    ServiceDRecords record = new ServiceDRecords();
+    record.setOperation("div");
     record.setA(a);
     record.setB(b);
-    record.setResult(sub);
-    serviceBRecordsService.saveRecord(record);
+    record.setResult(div);
+    serviceDRecordsService.saveRecord(record);
     
         return response;
     }
