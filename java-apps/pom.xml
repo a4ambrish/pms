@@ -7,10 +7,10 @@
     <modules>
         <module>common-lib</module>
         <module>service-a</module>
-        <module>service-aa</module>
+        <!-- <module>service-aa</module> -->
         <module>service-b</module>
-        <module>service-c</module>
-        <module>service-d</module> 
+        <!-- <module>service-c</module> -->
+        <!-- <module>service-d</module>  -->
     </modules>
     <dependencyManagement>
         <dependencies>

@@ -9,10 +9,10 @@
     </parent>
 	
 	<groupId>com.pms</groupId>
-	<artifactId>service-a</artifactId>
+	<artifactId>service-b</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>service-a</name>
-	<description>Service-A</description>
+	<name>service-b</name>
+	<description>Service-B</description>
 
 	<dependencies>
 	
